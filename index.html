@@ -15,6 +15,10 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+	* {
+  box-sizing: border-box;
+}
+
 	body{
 	font-size:13px;
 	font-family:manrope;
@@ -24,6 +28,7 @@
 	
       .container {
         display: flex;
+		flex-direction: row;
         align-items: center;
         justify-content: center
       }
@@ -32,7 +37,7 @@
 	   max-width: 100%
       }
       .image {
-        flex-basis: 40%
+        flex-basis: 50%
       }
       .text {
         font-size: 20px;
@@ -194,7 +199,18 @@ font-size:13px!important;
 color:  hsl(212, 23%, 69%);
 	text-decoration:none!important;
 }
-
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+  .mainbox {
+    position: absolute;
+    left: 70%;
+    top: 110%;
+    transform: translate(-50%, -50%);
+}
+}
 
     </style>
   </head>
@@ -250,3 +266,4 @@ color:  hsl(212, 23%, 69%);
   </div>
 </body>
 </html>
+
